@@ -1,0 +1,34 @@
+#define PUSH_BUTTON PD7
+#define BLINK_DELAY 200
+#ifndef F_CPU
+# define F_CPU 16000000     // CPU frequency in Hz required for delay
+#endif
+
+/* Includes ----------------------------------------------------------*/
+#include <util/delay.h>     // Functions for busy-wait delay loops
+#include <avr/io.h>         // AVR device-specific IO definitions
+#include <avr/sfr_defs.h>
+
+/* Functions ---------------------------------------------------------*/
+/**********************************************************************
+ * Function: Main function where the program execution begins
+ * Purpose:  Toggle two LEDs when a push button is pressed.
+ * Returns:  none
+ **********************************************************************/
+int main(void)
+{
+    PIND = PIND | (1<<PUSH_BUTTON);
+    DDRC = 0xFF;                   
+       
+    while (1) {    
+        if (bit_is_clear(PIND, PUSH_BUTTON)) {                   
+        for (PORTC = 0x04; PORTC != 0; PORTC <<= 1)
+        _delay_ms(BLINK_DELAY);           
+        for (PORTC = 0x80; PORTC != 0; PORTC >>= 1)
+        _delay_ms(BLINK_DELAY);
+        }        
+    }
+
+    // Will never reach this
+    return 0;
+}
