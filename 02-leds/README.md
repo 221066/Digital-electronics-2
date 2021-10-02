@@ -114,34 +114,7 @@ int main(void)
 #endif
 
 /* Includes ----------------------------------------------------------*/
-#include <util/delay.h>     // Functions| **Port** | **Pin** | **Input/output usage?** |
-| :-: | :-: | :-- |
-| A | x | Microcontroller ATmega328P does not contain port A |
-| B | 0 | Yes (Arduino pin D8) |
-|   | 1 | Yes (Arduino pin D9) |
-|   | 2 | Yes (Arduino pin D10) |
-|   | 3 | Yes (Arduino pin D11) |
-|   | 4 | Yes (Arduino pin D12) |
-|   | 5 | Yes (Arduino pin D13) |
-|   | 6 | No |
-|   | 7 | No |
-| C | 0 | Yes (Arduino pin A0/D14) |
-|   | 1 | Yes (Arduino pin A1/D15) |
-|   | 2 | Yes (Arduino pin A2/D16) |
-|   | 3 | Yes (Arduino pin A3/D17) |
-|   | 4 | Yes (Arduino pin A4/D18 |
-|   | 5 | Yes (Arduino pin A5/D19) |
-|   | 6 | Yes (Arduino pin RST) |
-|   | 7 | No |
-| D | 0 | Yes (Arduino pin RX D0) |
-|   | 1 | Yes (Arduino pin TX D1) |
-|   | 2 | Yes (Arduino pin D2) |
-|   | 3 | Yes (Arduino pin D3) |
-|   | 4 | Yes (Arduino pin D4) |
-|   | 5 | Yes (Arduino pin D5) |
-|   | 6 | Yes (Arduino pin D6) |
-|   | 7 | Yes (Arduino pin D7) |
- for busy-wait delay loops
+#include <util/delay.h>   
 #include <avr/io.h>         // AVR device-specific IO definitions
 #include <avr/sfr_defs.h>
 
