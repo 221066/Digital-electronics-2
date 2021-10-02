@@ -185,4 +185,4 @@ int main(void)
 
 ```
 
-   ![your figure](KnightRider.png)
+   ![your figure](kr.png)
