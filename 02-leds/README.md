@@ -170,15 +170,15 @@ int main(void)
     PORTD = PORTD | (1<<BUTTON);
 
     DDRC = 0xFF;
-while (1) {                       
-
-for (PORTC = 0x01; PORTC != 0; PORTC <<= 1)
-_delay_ms(BLINK_DELAY);
-
-for (PORTC = 0x80; PORTC != 0; PORTC >>= 1) 
-_delay_ms(BLINK_DELAY);
-}
-
+    while (1) {                       
+        if (bit_is_set(PIND, BUTTON))
+            {
+            for (PORTC = 0x01; PORTC != 0; PORTC <<= 1)
+            _delay_ms(BLINK_DELAY);
+            for (PORTC = 0x80; PORTC != 0; PORTC >>= 1) 
+            _delay_ms(BLINK_DELAY);
+        }
+    }
     // Will never reach this
     return 0;
 }
