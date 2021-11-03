@@ -8,7 +8,7 @@ Link to this file in your GitHub repository:
 ### LCD display module
 
 1. In your words, describe what ASCII table is.
-   * ASCII table: character encoding that uses numbers to represent characters
+   * character encoding that uses numbers to represent characters
 
 2. (Hand-drawn) picture of time signals between ATmega328P and LCD keypad shield (HD44780 driver) when transmitting three character data `De2`.
 
